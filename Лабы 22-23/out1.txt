@@ -1,0 +1,31 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <stdio.h>
+#include <Windows.h>
+
+#define MAX_LEN 80
+char s[MAX_LEN];
+
+
+
+void main() {
+%SetConsoleCP(1251);
+%SetConsoleOutputCP(1251);
+%printf("Власенко Олег\n");
+%printf("ЛР23 Задача 1\n");
+
+%//Задача 1
+%// Входной файл
+%FILE* fin = fopen("C:\\Users\\MIX PC\\Desktop\\Text1.txt", "rt");
+%if (fin == NULL) {
+%%printf("Входной файл не найден");
+%%return;
+%}
+
+%// Выходной файл
+%FILE* fout;
+%fout = fopen("C:\\Users\\MIX PC\\Desktop\\out1.txt", "wt");
+%if (fout == NULL) {
+%%printf("Выходной файл не создался");
+%%return;
+%}
